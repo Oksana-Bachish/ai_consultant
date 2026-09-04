@@ -1,0 +1,15 @@
+services:
+  ai_consultant:
+    build: .
+    container_name: ai_consultant_local
+    restart: always
+    ports:
+      - '8001:8001'
+    env_file:
+      - .env.dev
+    networks:
+      - ai_local_net
+
+networks:
+  ai_local_net:
+    driver: bridge

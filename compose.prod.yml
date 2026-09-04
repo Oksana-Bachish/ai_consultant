@@ -1,0 +1,14 @@
+services:
+  ai_consultant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_consultant_prod
+    restart: always
+    env_file:
+      - .env.prod
+
+networks:
+  default:
+    name: backend_app_net
+    external: true
