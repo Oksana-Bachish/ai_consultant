@@ -53,6 +53,11 @@ ALLOWED_ORIGINS=http://127.0.0.1:8000,http://localhost:8000
 docker compose up -d --build
 ```
 
+6. Проект покрыт интеграционными тестами с использованием `pytest` и `httpx.AsyncClient`. Для запуска тестов выполните:
+```bash
+docker compose exec ai_consultant python -m pytest
+```
+
 После запуска Swagger-документация API будет доступна по адресу: `http://127.0.0.1:8001/docs`
 
 ## 🐳 Развертывание на сервере (Production)
